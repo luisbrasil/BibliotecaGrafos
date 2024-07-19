@@ -112,7 +112,7 @@ public class Grafo<T, TK>
     
     private void ImprimirGrafoRecursivo(No<T> noAtual, List<bool> nosVisitados, ref double custoAcumulado, ref No<T>? ultimoNo)
     {
-        if (noAtual.Arestas.Count != 2) return;
+        //if (noAtual.Arestas.Count != 2) return;
         
         foreach (var aresta in noAtual.Arestas)
         {
