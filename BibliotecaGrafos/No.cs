@@ -1,4 +1,6 @@
-﻿namespace BibliotecaGrafos;
+﻿using System.Collections.Generic;
+
+namespace BibliotecaGrafos;
 
 public class No<T>
 {
