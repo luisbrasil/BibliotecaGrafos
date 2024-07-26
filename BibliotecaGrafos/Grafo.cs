@@ -1,6 +1,6 @@
 ﻿namespace BibliotecaGrafos;
 
-public class Grafo<T, TK>
+public class Grafo<T>
 {
     public List<No<T>> Nos { get; private set; }
 
@@ -32,21 +32,6 @@ public class Grafo<T, TK>
         return Nos.FirstOrDefault(predicate);
     }
     
-    public void AdicionarAresta(double peso, No<T> noInicial, No<T> noFinal)
-    {
-        var aresta = new Aresta<T>(peso, noInicial, noFinal);
-        noInicial.AdicionarAresta(aresta);
-        
-        var reverseEdge = new Aresta<T>(peso, noFinal, noInicial);
-        noFinal.AdicionarAresta(reverseEdge);
-    }
-    
-    public void RemoverAresta(Aresta<T> aresta)
-    {
-        aresta.NoInicial.RemoverAresta(aresta);
-        aresta.NoFinal.RemoverAresta(aresta);
-    }
-    
     public bool GrafoCompleto()
     {
         var qtdeNos = Nos.Count;
@@ -74,37 +59,32 @@ public class Grafo<T, TK>
         return true;
     }
     
-    public static Grafo<int, double> GerarGrafoAleatorioInteiros(int qtdeNos)
+    public static Grafo<int> GerarGrafoAleatorioInteirosConexo(int qtdeNos)
     {
         var random = new Random();
         const int lowerBound = 0;
         const int upperBound = 100;
 
-        var grafo = new Grafo<int, double>(qtdeNos);
-        No<int>? noAnterior = null;
-
+        var grafo = new Grafo<int>(qtdeNos);
+        
         for (var i = 0; i < qtdeNos; i++)
         {
             grafo.AdicionarNo(i);
         }
 
-        var noVisitado = new bool[grafo.Nos.Count];
-        for (var i = 0; i < qtdeNos - 1; i++)
+        for (var i = 0; i < qtdeNos; i++)
         {
-            var noInicial = grafo.Nos[i];
-
-            for (var j = 1; j < qtdeNos; j++)
+            for (var j = 0; j < qtdeNos; j++)
             {
-                var doubleAleatorio = lowerBound + (upperBound - lowerBound) * random.NextDouble();
-                var noFinal = grafo.Nos[j];
+                if(i == j)
+                    continue;
 
-                if (!noVisitado[noFinal.Id] && noFinal != noAnterior && noFinal != noInicial)
-                {
-                    grafo.AdicionarAresta(doubleAleatorio, noInicial, noFinal);
-                }
+                var sorteado = random.NextSingle();
+                if (sorteado < 0.65) continue;
+                var doubleAleatorio = lowerBound + (upperBound - lowerBound) * random.NextDouble();
+
+                grafo.Nos[i].AdicionarAresta(new Aresta<int>(doubleAleatorio, grafo.Nos[i], grafo.Nos[j]));
             }
-            noVisitado[noInicial.Id] = true;
-            noAnterior = noInicial;
         }
 
         return grafo;
@@ -148,5 +128,29 @@ public class Grafo<T, TK>
         }
 
         Console.WriteLine("    Custo acumulado: " + custoAcumulado);
+    }
+    
+    public bool EhConexo()
+    {
+        if (Nos.Count == 0)
+            return true;
+
+        var visitados = new HashSet<No<T>>();
+        DepthFirstSearch(Nos[0], visitados);
+
+        return visitados.Count == Nos.Count;
+    }
+
+    private static void DepthFirstSearch(No<T> no, HashSet<No<T>> visitados)
+    {
+        visitados.Add(no);
+        foreach (var aresta in no.Arestas)
+        {
+            var noAdjacente = aresta.NoInicial.Equals(no) ? aresta.NoFinal : aresta.NoInicial;
+            if (!visitados.Contains(noAdjacente))
+            {
+                DepthFirstSearch(noAdjacente, visitados);
+            }
+        }
     }
 }
