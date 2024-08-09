@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BibliotecaGrafos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd7916764541f8d9b114d05c643b51bdbea52f6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ff907a994021bb5c26a7e27396639c1f362ba0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BibliotecaGrafos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BibliotecaGrafos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
