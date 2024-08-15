@@ -12,6 +12,9 @@ static class Program{
             teste = Grafo<int>.GerarGrafoAleatorioInteirosConexo(6);
         }
 
+        Console.WriteLine("FloydWarshal:");
         FloydWarshal.FloydWarshall(teste, teste.Nos.First(),teste.Nos.Last());
+        Console.WriteLine("\nDijkstra:");
+        Dijkstra.RunDijkstra(teste, teste.Nos.First(), teste.Nos.Last());
     }
 }

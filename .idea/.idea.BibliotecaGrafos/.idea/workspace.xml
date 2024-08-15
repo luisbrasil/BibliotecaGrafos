@@ -8,8 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7acaa341-1dcd-4892-ba8b-18bdbef4dfa2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BibliotecaGrafos/Algoritimos/Dijkstra.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BibliotecaGrafos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BibliotecaGrafos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Algoritimos/FloydWarshall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/Algoritimos/FloydWarshall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Dijkstra/Dijkstra.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Dijkstra/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Grafo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/Grafo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.exe" afterDir="false" />
@@ -114,7 +117,7 @@
       <updated>1723160896490</updated>
       <workItem from="1723160897729" duration="2525000" />
       <workItem from="1723202942801" duration="10946000" />
-      <workItem from="1723762029914" duration="1122000" />
+      <workItem from="1723762029914" duration="3175000" />
     </task>
     <servers />
   </component>
@@ -166,6 +169,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BibliotecaGrafos/Program.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\Luis Fernando\Documents\Faculdade\TCC\BibliotecaGrafos\BibliotecaGrafos\Program.cs" containingFunctionPresentation="Method 'Main'">
+            <startOffsets>
+              <option value="488" />
+            </startOffsets>
+            <endOffsets>
+              <option value="553" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

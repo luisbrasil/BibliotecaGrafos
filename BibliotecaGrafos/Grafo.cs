@@ -90,7 +90,7 @@ public class Grafo<T>
 
                 var sorteado = random.NextSingle();
                 if (sorteado < 0.65) continue;
-                var doubleAleatorio = lowerBound + (upperBound - lowerBound) * random.NextDouble();
+                var doubleAleatorio = random.Next(lowerBound,upperBound);
 
                 grafo.AdicionarAresta(grafo.Nos[i], new Aresta<int>(doubleAleatorio, grafo.Nos[i], grafo.Nos[j]));
             }
