@@ -26,6 +26,11 @@ public class Grafo<T>
         return no;
     }
     
+    public void AdicionarAresta(No<T> no, Aresta<T> aresta)
+    {
+        no.Arestas.Add(aresta);
+    }
+    
     public void RemoverNo(No<T> no)
     {
         Nos.Remove(no);
@@ -87,7 +92,7 @@ public class Grafo<T>
                 if (sorteado < 0.65) continue;
                 var doubleAleatorio = lowerBound + (upperBound - lowerBound) * random.NextDouble();
 
-                grafo.Nos[i].AdicionarAresta(new Aresta<int>(doubleAleatorio, grafo.Nos[i], grafo.Nos[j]));
+                grafo.AdicionarAresta(grafo.Nos[i], new Aresta<int>(doubleAleatorio, grafo.Nos[i], grafo.Nos[j]));
             }
         }
 

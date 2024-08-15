@@ -15,11 +15,6 @@ public class No<T>
         Arestas = new List<Aresta<T>>();
     }
 
-    public void AdicionarAresta(Aresta<T> aresta)
-    {
-        Arestas.Add(aresta);
-    }
-
     public void RemoverAresta(Aresta<T> aresta)
     {
         Arestas.Remove(aresta);
