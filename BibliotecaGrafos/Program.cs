@@ -1,4 +1,6 @@
-﻿namespace BibliotecaGrafos;
+﻿using BibliotecaGrafos.Algoritimos;
+
+namespace BibliotecaGrafos;
 
 static class Program{
     public static void Main()
@@ -10,6 +12,6 @@ static class Program{
             teste = Grafo<int>.GerarGrafoAleatorioInteirosConexo(6);
         }
 
-        teste.ImprimirGrafo();
+        FloydWarshal.FloydWarshall(teste, teste.Nos.First(),teste.Nos.Last());
     }
 }

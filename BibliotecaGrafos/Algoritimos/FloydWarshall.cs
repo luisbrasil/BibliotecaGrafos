@@ -6,10 +6,11 @@ class FloydWarshal
 {
     private const int Infinite = 9999;
    
-    public static void FloydWarshall(Grafo<int> grafo)
+    public static void FloydWarshall(Grafo<int> grafo, No<int> origem, No<int> destino)
     {
         var qtdeNos = grafo.Nos.Count;
         var dist = new double[qtdeNos, qtdeNos];
+        var next = new int?[qtdeNos, qtdeNos];  // Matriz para rastrear os caminhos
 
         for (var i = 0; i < qtdeNos; i++)
         {
@@ -19,9 +20,11 @@ class FloydWarshal
                     dist[i, j] = 0;
                 else
                     dist[i, j] = Infinite;
+
+                next[i, j] = null;
             }
         }
-        
+
         foreach (var no in grafo.Nos)
         {
             foreach (var aresta in no.Arestas)
@@ -29,6 +32,7 @@ class FloydWarshal
                 var u = no.Id;
                 var v = aresta.NoFinal.Id;
                 dist[u, v] = aresta.Peso;
+                next[u, v] = v;  // Armazenando o próximo nó no caminho
             }
         }
 
@@ -41,29 +45,39 @@ class FloydWarshal
                     if (dist[i, j] > dist[i, k] + dist[k, j])
                     {
                         dist[i, j] = dist[i, k] + dist[k, j];
+                        next[i, j] = next[i, k];  // Atualizando o caminho
                     }
                 }
             }
         }
-        
-        Print(dist, qtdeNos);
-    }
-    
-    private static void Print(double[,] distance, int verticesCount)
-    {
-        Console.WriteLine("Menor distancia entre cada par de vertices:");
 
-        for (var i = 0; i < verticesCount; ++i)
+        if (Math.Abs(dist[origem.Id, destino.Id] - Infinite) < 0.1)
         {
-            for (var j = 0; j < verticesCount; ++j)
-            {
-                if (Math.Abs(distance[i, j] - Infinite) < 0.1)
-                    Console.Write("Non".PadLeft(7));
-                else
-                    Console.Write(distance[i, j].ToString(CultureInfo.CurrentCulture).PadLeft(7));
-            }
-
-            Console.WriteLine();
+            Console.WriteLine($"Não existe caminho entre origem e destino");
         }
+        else
+        {
+            Console.WriteLine($"Distância mínima de origem para destino: {dist[origem.Id, destino.Id]}");
+            Console.Write("Caminho: ");
+            PrintPath(next, origem.Id, destino.Id);
+        }
+    }
+
+    private static void PrintPath(int?[,] next, int origem, int destino)
+    {
+        if (next[origem, destino] == null)
+        {
+            Console.WriteLine("Não há caminho disponível.");
+            return;
+        }
+
+        var path = new List<int> { origem };
+        while (origem != destino)
+        {
+            origem = next[origem, destino].Value;
+            path.Add(origem);
+        }
+
+        Console.WriteLine(string.Join(" -> ", path));
     }
 }
