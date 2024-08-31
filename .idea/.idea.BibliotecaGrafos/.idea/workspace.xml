@@ -8,24 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7acaa341-1dcd-4892-ba8b-18bdbef4dfa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BibliotecaGrafos/Algoritimos/Dijkstra.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BibliotecaGrafos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BibliotecaGrafos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Dijkstra/Dijkstra.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Dijkstra/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Grafo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/Grafo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Algoritimos/FloydWarshall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/Algoritimos/FloydWarshall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/ref/BibliotecaGrafos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/ref/BibliotecaGrafos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/refint/BibliotecaGrafos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/refint/BibliotecaGrafos.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,27 +31,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.BibliotecaGrafos.executor": "Run",
-    ".NET Static Method.Program.main.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.BibliotecaGrafos.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Static Method.Program.main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Luis Fernando\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Luis Fernando\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Luis Fernando\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Luis Fernando\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Luis Fernando\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Luis Fernando\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.BibliotecaGrafos">
     <configuration name="BibliotecaGrafos" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.exe" />
@@ -117,7 +104,8 @@
       <updated>1723160896490</updated>
       <workItem from="1723160897729" duration="2525000" />
       <workItem from="1723202942801" duration="10946000" />
-      <workItem from="1723762029914" duration="3175000" />
+      <workItem from="1723762029914" duration="4102000" />
+      <workItem from="1724370949284" duration="1746000" />
     </task>
     <servers />
   </component>
@@ -136,10 +124,10 @@
           <line>9</line>
           <properties documentPath="C:\Users\Luis Fernando\Documents\Faculdade\TCC\BibliotecaGrafos\BibliotecaGrafos\Algoritimos\FloydWarshall.cs" containingFunctionPresentation="Method 'FloydWarshall'">
             <startOffsets>
-              <option value="226" />
+              <option value="193" />
             </startOffsets>
             <endOffsets>
-              <option value="227" />
+              <option value="194" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -149,10 +137,10 @@
           <line>21</line>
           <properties documentPath="C:\Users\Luis Fernando\Documents\Faculdade\TCC\BibliotecaGrafos\BibliotecaGrafos\Algoritimos\FloydWarshall.cs" containingFunctionPresentation="Method 'FloydWarshall'">
             <startOffsets>
-              <option value="618" />
+              <option value="585" />
             </startOffsets>
             <endOffsets>
-              <option value="640" />
+              <option value="607" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
@@ -162,23 +150,23 @@
           <line>33</line>
           <properties documentPath="C:\Users\Luis Fernando\Documents\Faculdade\TCC\BibliotecaGrafos\BibliotecaGrafos\Algoritimos\FloydWarshall.cs" containingFunctionPresentation="Method 'FloydWarshall'">
             <startOffsets>
-              <option value="901" />
+              <option value="868" />
             </startOffsets>
             <endOffsets>
-              <option value="926" />
+              <option value="893" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/BibliotecaGrafos/Program.cs</url>
-          <line>17</line>
+          <line>19</line>
           <properties documentPath="C:\Users\Luis Fernando\Documents\Faculdade\TCC\BibliotecaGrafos\BibliotecaGrafos\Program.cs" containingFunctionPresentation="Method 'Main'">
             <startOffsets>
-              <option value="488" />
+              <option value="470" />
             </startOffsets>
             <endOffsets>
-              <option value="553" />
+              <option value="535" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

@@ -13,7 +13,9 @@ static class Program{
         }
 
         Console.WriteLine("FloydWarshal:");
-        FloydWarshal.FloydWarshall(teste, teste.Nos.First(),teste.Nos.Last());
+        FloydWarshal.FloydWarshall(teste);
+        
+        
         Console.WriteLine("\nDijkstra:");
         Dijkstra.RunDijkstra(teste, teste.Nos.First(), teste.Nos.Last());
     }

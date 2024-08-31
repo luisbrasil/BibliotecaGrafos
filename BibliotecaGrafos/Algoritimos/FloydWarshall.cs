@@ -6,7 +6,7 @@ class FloydWarshal
 {
     private const int Infinite = 9999;
    
-    public static void FloydWarshall(Grafo<int> grafo, No<int> origem, No<int> destino)
+    public static void FloydWarshall(Grafo<int> grafo)
     {
         var qtdeNos = grafo.Nos.Count;
         var dist = new double[qtdeNos, qtdeNos];
@@ -51,19 +51,10 @@ class FloydWarshal
             }
         }
 
-        if (Math.Abs(dist[origem.Id, destino.Id] - Infinite) < 0.1)
-        {
-            Console.WriteLine($"Não existe caminho entre origem e destino");
-        }
-        else
-        {
-            Console.WriteLine($"Distância mínima de origem para destino: {dist[origem.Id, destino.Id]}");
-            Console.Write("Caminho: ");
-            PrintPath(next, origem.Id, destino.Id);
-        }
+        ExibirTodasDistanciasECaminhos(dist, next);
     }
 
-    private static void PrintPath(int?[,] next, int origem, int destino)
+    private static void CaminhoEnterVertices(int?[,] next, int origem, int destino)
     {
         if (next[origem, destino] == null)
         {
@@ -79,5 +70,30 @@ class FloydWarshal
         }
 
         Console.WriteLine(string.Join(" -> ", path));
+    }
+    
+    // Método para exibir as distâncias e caminhos mínimos entre todos os nós
+    public static void ExibirTodasDistanciasECaminhos(double[,] dist, int?[,] next)
+    {
+        var qtdeNos = dist.GetLength(0);
+    
+        for (var i = 0; i < qtdeNos; i++)
+        {
+            for (var j = 0; j < qtdeNos; j++)
+            {
+                if (i == j) continue;
+                
+                if (double.IsPositiveInfinity(dist[i, j]))
+                {
+                    Console.WriteLine($"Não existe caminho de {i} para {j}");
+                }
+                else
+                {
+                    Console.WriteLine($"Distância mínima de {i} para {j}: {dist[i, j]}");
+                    Console.Write("Caminho: ");
+                    CaminhoEnterVertices(next, i, j);
+                }
+            }
+        }
     }
 }
