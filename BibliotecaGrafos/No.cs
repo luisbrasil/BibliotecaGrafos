@@ -14,9 +14,4 @@ public class No<T>
         Valor = valor;
         Arestas = new List<Aresta<T>>();
     }
-
-    public void RemoverAresta(Aresta<T> aresta)
-    {
-        Arestas.Remove(aresta);
-    }
 }

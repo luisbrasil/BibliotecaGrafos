@@ -7,10 +7,14 @@ static class Program{
     {
         var teste = Grafo<int>.GerarGrafoAleatorioInteirosConexo(6);
 
-        if (!teste.EhConexo())
+        while (!teste.EhConexo())
         {
             teste = Grafo<int>.GerarGrafoAleatorioInteirosConexo(6);
         }
+        
+        teste.ImprimirMatrizAdjacencia();
+        
+        Console.WriteLine("\n");
 
         Console.WriteLine("FloydWarshal:");
         FloydWarshal.FloydWarshall(teste);

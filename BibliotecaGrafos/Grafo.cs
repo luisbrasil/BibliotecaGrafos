@@ -99,44 +99,38 @@ public class Grafo<T>
         return grafo;
     }
     
-    private void ImprimirGrafoRecursivo(No<T> noAtual, List<bool> nosVisitados, ref double custoAcumulado, ref No<T>? ultimoNo)
+    public void ImprimirMatrizAdjacencia()
     {
-        //if (noAtual.Arestas.Count != 2) return;
-        
-        foreach (var aresta in noAtual.Arestas)
+        var n = Nos.Count;
+        var matriz = new double[n, n];
+
+        for (var i = 0; i < n; i++)
         {
-            var noDestino = aresta.NoFinal;
-            if (nosVisitados[noDestino.Id]) continue;
-            nosVisitados[noDestino.Id] = true;
-            Console.Write(" " + noDestino.Valor);
-            ultimoNo = noDestino;
-            custoAcumulado += aresta.Peso;
-            ImprimirGrafoRecursivo(noDestino, nosVisitados, ref custoAcumulado, ref ultimoNo);
-        }
-    }
-
-    public void ImprimirGrafo()
-    {
-        var nosVisitados = new List<bool>(new bool[Nos.Count]);
-        var noInicial = Nos[0];
-        No<T>? ultimoNo = null;
-        double custoAcumulado = 0;
-
-        nosVisitados[noInicial.Id] = true;
-        Console.Write(" " + noInicial.Valor);
-        ImprimirGrafoRecursivo(noInicial, nosVisitados, ref custoAcumulado, ref ultimoNo);
-
-        Console.WriteLine("[" + ultimoNo.Valor + "]");
-        if (ultimoNo.Arestas.Count == 2)
-        {
-            foreach (var aresta in ultimoNo.Arestas.Where(aresta => aresta.NoFinal == noInicial))
+            for (var j = 0; j < n; j++)
             {
-                custoAcumulado += aresta.Peso;
-                break;
+                matriz[i, j] = 0;
             }
         }
 
-        Console.WriteLine("    Custo acumulado: " + custoAcumulado);
+        foreach (var no in Nos)
+        {
+            foreach (var aresta in no.Arestas)
+            {
+                var origem = no.Id;
+                var destino = aresta.NoFinal.Id;
+                matriz[origem, destino] = aresta.Peso;
+            }
+        }
+
+        Console.WriteLine("Matriz de Adjacência:");
+        for (var i = 0; i < n; i++)
+        {
+            for (var j = 0; j < n; j++)
+            {
+                Console.Write(matriz[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
     }
     
     public bool EhConexo()
