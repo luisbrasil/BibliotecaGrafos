@@ -68,7 +68,7 @@ public class Grafo<T>
         return true;
     }
     
-    public static Grafo<int> GerarGrafoAleatorioInteirosConexo(int qtdeNos)
+    public static Grafo<int> GerarGrafoAleatorioInteiros(int qtdeNos)
     {
         var random = new Random();
         const int lowerBound = 0;
@@ -155,5 +155,17 @@ public class Grafo<T>
                 DepthFirstSearch(noAdjacente, visitados);
             }
         }
+    }
+    
+    public static Grafo<int> GerarGrafoAleatorioInteiroConexo(int qtdeNos)
+    {
+        var grafo = Grafo<int>.GerarGrafoAleatorioInteiros(qtdeNos);
+
+        while (!grafo.EhConexo())
+        {
+            grafo = Grafo<int>.GerarGrafoAleatorioInteiros(qtdeNos);
+        }
+
+        return grafo;
     }
 }

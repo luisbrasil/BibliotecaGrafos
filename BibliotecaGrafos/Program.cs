@@ -6,20 +6,16 @@ namespace BibliotecaGrafos;
 static class Program{
     public static void Main()
     {
-        var teste = Grafo<int>.GerarGrafoAleatorioInteirosConexo(6);
-
-        while (!teste.EhConexo())
-        {
-            teste = Grafo<int>.GerarGrafoAleatorioInteirosConexo(6);
-        }
+        //var grafo = Grafo<int>.GerarGrafoAleatorioInteiroConexo(6);
+        var grafo = GrafoBuilder.GrafoExemplo1();  
         
-        teste.ImprimirMatrizAdjacencia();
+        grafo.ImprimirMatrizAdjacencia();
         
         Console.WriteLine("\n");
 
         Console.WriteLine("FloydWarshall:");
         var stopwatch = Stopwatch.StartNew();
-        FloydWarshal.FloydWarshall(teste);
+        FloydWarshal.FloydWarshall(grafo);
         stopwatch.Stop();
 
         var tempoFloydWarshall = stopwatch.Elapsed;
@@ -28,7 +24,7 @@ static class Program{
 
         Console.WriteLine("Dijkstra:");
         stopwatch.Restart();
-        Dijkstra.RunDijkstra(teste, teste.Nos.First(), teste.Nos.Last());
+        Dijkstra.RunDijkstra(grafo, grafo.Nos.First(), grafo.Nos.Last());
         stopwatch.Stop();
         
         var tempoDijkstra = stopwatch.Elapsed;
