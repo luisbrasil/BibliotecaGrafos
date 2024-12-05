@@ -62,12 +62,12 @@ class Dijkstra
         // Reconstrução e impressão do caminho
         if (Math.Abs(dist[destino] - double.MaxValue) < 0.1)
         {
-            Console.WriteLine("Não existe caminho entre origem e destino");
+            // Console.WriteLine("Não existe caminho entre origem e destino");
         }
         else
         {
-            Console.WriteLine($"Distância mínima de origem para destino: {dist[destino]}");
-            Console.Write("Caminho: ");
+            // Console.WriteLine($"Distância mínima de origem para destino: {dist[destino]}");
+            // Console.Write("Caminho: ");
             var caminho = new Stack<No<T>>();
             var atual = destino;
             while (!atual.Equals(origem))
@@ -78,7 +78,7 @@ class Dijkstra
 
             caminho.Push(origem);
 
-            Console.WriteLine(string.Join(" -> ", caminho.Select(n => n.Valor)));
+            // Console.WriteLine(string.Join(" -> ", caminho.Select(n => (char)(65+n.Id))));
         }
     }
 }

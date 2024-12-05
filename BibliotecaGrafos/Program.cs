@@ -6,11 +6,25 @@ namespace BibliotecaGrafos;
 static class Program{
     public static void Main()
     {
-        //var grafo = Grafo<int>.GerarGrafoAleatorioInteiroConexo(6);
-        var grafo = GrafoBuilder.GrafoExemplo1();  
-        
+        //GrafoManual();
+        //GrafoAleatorio();
+    }
+    
+    public static void GrafoManual()
+    {
+        var grafo = GrafoBuilder.GrafoExemplo1();
         grafo.ImprimirMatrizAdjacencia();
-        
+        RodarAlgoritmos(grafo);
+    }
+
+    public static void GrafoAleatorio()
+    {
+        var grafo = Grafo<int>.GerarGrafoAleatorioInteiroConexo(1000);
+        RodarAlgoritmos(grafo);
+    }
+
+    public static void RodarAlgoritmos(Grafo<int> grafo)
+    {
         Console.WriteLine("\n");
 
         Console.WriteLine("FloydWarshall:");
