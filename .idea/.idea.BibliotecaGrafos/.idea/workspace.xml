@@ -17,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BibliotecaGrafos/obj/Release/net8.0/BibliotecaGrafos.sourcelink.json" afterDir="false" />
@@ -91,7 +90,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Static Method.BibliotecaGrafos.Program.GrafoManual">
+  <component name="RunManager" selected=".NET Static Method.BibliotecaGrafos.Program.GrafoAleatorio">
     <configuration name="BibliotecaGrafos" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/BibliotecaGrafos/bin/Release/net8.0/BibliotecaGrafos.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -160,9 +159,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Static Method.BibliotecaGrafos.Program.GrafoAleatorio" />
         <item itemvalue=".NET Static Method.BibliotecaGrafos.Program.GrafoManual" />
         <item itemvalue=".NET Project.BibliotecaGrafos" />
-        <item itemvalue=".NET Static Method.BibliotecaGrafos.Program.GrafoAleatorio" />
         <item itemvalue=".NET Static Method.Program.main" />
       </list>
     </recent_temporary>
@@ -186,7 +185,7 @@
       <workItem from="1728078479890" duration="5695000" />
       <workItem from="1728602971807" duration="1204000" />
       <workItem from="1731880127799" duration="7288000" />
-      <workItem from="1733405428526" duration="577000" />
+      <workItem from="1733405428526" duration="2310000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste para imprimir o Grafo">
       <option name="closed" value="true" />
@@ -248,10 +247,10 @@
           <line>80</line>
           <properties documentPath="C:\Users\Luis Fernando\Documents\Faculdade\TCC\BibliotecaGrafos\BibliotecaGrafos\Algoritimos\Dijkstra.cs" containingFunctionPresentation="Method 'RunDijkstra'">
             <startOffsets>
-              <option value="3021" />
+              <option value="3009" />
             </startOffsets>
             <endOffsets>
-              <option value="3098" />
+              <option value="3086" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

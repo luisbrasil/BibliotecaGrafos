@@ -19,7 +19,8 @@ static class Program{
 
     public static void GrafoAleatorio()
     {
-        var grafo = Grafo<int>.GerarGrafoAleatorioInteiroConexo(1000);
+        var grafo = Grafo<int>.GerarGrafoAleatorioInteiroConexo(10);
+        grafo.ImprimirMatrizAdjacencia();
         RodarAlgoritmos(grafo);
     }
 

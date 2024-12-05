@@ -54,11 +54,11 @@ class FloydWarshal
         ExibirTodasDistanciasECaminhos(dist, next);
     }
 
-    private static void CaminhoEnterVertices(int?[,] next, int origem, int destino)
+    private static void CaminhoEntreVertices(int?[,] next, int origem, int destino)
     {
         if (next[origem, destino] == null)
         {
-            // Console.WriteLine("Não há caminho disponível.");
+            Console.WriteLine("Não há caminho disponível.");
             return;
         }
 
@@ -69,7 +69,8 @@ class FloydWarshal
             path.Add(origem);
         }
 
-        // Console.WriteLine(string.Join(" -> ", path));
+        var pathAsChars = path.Select(node => (char)(65 + node));
+        Console.WriteLine(string.Join(" -> ", pathAsChars));
     }
     
     // Método para exibir as distâncias e caminhos mínimos entre todos os nós
@@ -85,13 +86,13 @@ class FloydWarshal
                 
                 if (double.IsPositiveInfinity(dist[i, j]))
                 {
-                    // Console.WriteLine($"Não existe caminho de {(char)(65+i)} para {(char)(j+65)}");
+                    Console.WriteLine($"Não existe caminho de {(char)(65+i)} para {(char)(j+65)}");
                 }
                 else
                 {
-                    // Console.WriteLine($"Distância mínima de {(char)(65+i)} para {(char)(65+j)}: {dist[i, j]}");
-                    // Console.Write("Caminho: ");
-                    CaminhoEnterVertices(next, i, j);
+                    Console.WriteLine($"Distância mínima de {(char)(65+i)} para {(char)(65+j)}: {dist[i, j]}");
+                    Console.Write("Caminho: ");
+                    CaminhoEntreVertices(next, i, j);
                 }
             }
         }
